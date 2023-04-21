@@ -1,11 +1,14 @@
-const nemoes = ["Nemo", "Nami", "Nomu", "Nono"];
+const nemoes = ['Nemo', 'Nami', 'Nomu', 'Nono'];
 
-function findNemo(arr){
-  for(let i = 0; i < arr.length; i++){
-    if(arr[i] === "Nemo"){
-      console.log("Find Nemo");
-    }
-  }
+function findNemo(array) {
+	for (const element of array) {
+		if (element === 'Nemo') {
+			console.log('Find Nemo');
+			break; // Optimize the run time
+		}
+	}
 }
 
 findNemo(nemoes);
+
+// Worst case --> The number of times the function is run until it finds the associated value
