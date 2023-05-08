@@ -11,4 +11,4 @@ function findNemo(array) {
 
 findNemo(nemoes);
 
-// Rule number one Worst case --> The number of times the function is run until it finds the associated value 
+// Rule number one Worst case --> The number of times the function is run until it finds the associated value
