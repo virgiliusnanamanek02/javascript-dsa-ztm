@@ -1,8 +1,8 @@
-function logFunc(n){
+function logFunc(n) {
   if (n === 0) {
     return "Done!"
   }
 
-  n = Math.floor(n/2);
+  n = Math.floor(n / 2);
   return logFunc(n);
 }
