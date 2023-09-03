@@ -3,11 +3,7 @@ function twoSum(nums, target) {
 
   for (let i = 0; i < nums.length; i++) {
     const complement = target - nums[i];
-    console.table([target, complement, nums[i]]);
-
     if (numMap.hasOwnProperty(complement)) {
-      console.log(i);
-      console.log(numMap[complement]);
       return [numMap[complement], i];
     }
 
