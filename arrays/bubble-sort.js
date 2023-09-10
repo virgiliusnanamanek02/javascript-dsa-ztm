@@ -21,7 +21,7 @@ function bubbleSort(arr) {
 // Contoh penggunaan:
 const myArray = [64, 34, 25, 12, 22, 11, 90];
 bubbleSort(myArray);
-console.log("Array yang sudah diurutkan:", myArray);
+console.log(myArray);
 
 function bubbleSortOpt(nums) {
   let n = nums.length;
