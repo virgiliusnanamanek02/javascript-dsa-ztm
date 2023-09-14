@@ -14,3 +14,25 @@ function shortingChars(chars) {
 }
 
 console.log(shortingChars(["r", "b", "z", "j"]));
+
+function shortingCharsOpt(chars) {
+  if (chars.length <= 1) {
+    return chars;
+  }
+
+  let pivot = chars[0];
+  let left = [];
+  let right = [];
+
+  for (let i = 1; i < chars.length; i++) {
+    if (chars[i] < pivot) {
+      left.push(chars[i]);
+    } else {
+      right.push(chars[i]);
+    }
+  }
+
+  return [...shortingCharsOpt(left), pivot, ...shortingCharsOpt(right)];
+}
+
+console.log(shortingCharsOpt(["r", "b", "z", "j"]));
