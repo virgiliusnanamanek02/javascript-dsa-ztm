@@ -20,3 +20,24 @@ console.log(goodPairs([1, 1, 2, 3, 2]));
 console.log(goodPairs([1, 1, 1]));
 console.log(goodPairs([1, 2, 3]));
 console.log(goodPairs([1, 2, 3, 1, 1, 3]));
+
+const goodPairsOpt = (nums) => {
+  const numsMap = {};
+  let count = 0;
+
+  for (const num of nums) {
+    if (numsMap[num]) {
+      count += numsMap[num];
+      numsMap[num]++;
+    } else {
+      numsMap[num] = 1;
+    }
+  }
+
+  return count;
+};
+
+console.log(goodPairsOpt([1, 1, 2, 3, 2]));
+console.log(goodPairsOpt([1, 1, 1]));
+console.log(goodPairsOpt([1, 2, 3]));
+console.log(goodPairsOpt([1, 2, 3, 1, 1, 3]));
