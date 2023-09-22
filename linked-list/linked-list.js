@@ -34,6 +34,19 @@ class LinkedList {
 
     this.head = prev;
   }
+
+  getLinkedListLength() {
+    let length = 0;
+    let current = this.head;
+
+    while (current) {
+      length++;
+      current = current.next
+    }
+
+    return length;
+  }
+
   display() {
     let current = this.head;
     while (current) {
@@ -56,3 +69,5 @@ linkedList.reverseLinkedList();
 
 console.log("After reversed:");
 linkedList.display();
+
+console.log(linkedList.getLinkedListLength());
