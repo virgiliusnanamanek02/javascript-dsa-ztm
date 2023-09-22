@@ -47,6 +47,25 @@ class LinkedList {
     return length;
   }
 
+  deleteNode(value){
+    let current = this.head;
+    if (!current) {
+      return;
+    }
+
+    if (current.data == value) {
+      current = current.next;
+    }
+
+    while (current.next) {
+      if (current.next.data == value) {
+        current.next = current.next.next;
+        return
+      }
+      current = current.next
+    }
+  }
+  
   display() {
     let current = this.head;
     while (current) {
@@ -69,5 +88,14 @@ linkedList.reverseLinkedList();
 
 console.log("After reversed:");
 linkedList.display();
-
+console.log("Length of linkedlist:");
 console.log(linkedList.getLinkedListLength());
+
+linkedList.deleteNode(3);
+
+console.log("After deleted:");
+linkedList.display();
+
+
+
+
