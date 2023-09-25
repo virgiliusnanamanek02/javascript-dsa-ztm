@@ -97,5 +97,3 @@ console.log("After deleted:");
 linkedList.display();
 
 
-
-
