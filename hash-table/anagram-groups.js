@@ -19,3 +19,4 @@ const anagramGroups = (words) => {
 }
 
 console.log(anagramGroups(["listen", "silent", "hello", "world", "act", "cat"]))
+console.log(anagramGroups(["eate", "ate", "tea"]))
