@@ -46,17 +46,24 @@ class Trie {
 
       if (!currentNode.children[char]) {
         return false;
-      } else {
-        currentNode = currentNode.children[char];
       }
 
-      if (i === word.length - 1 && currentNode.isEndOfWord) {
-        return true;
+      currentNode = currentNode.children[char];
+
+      if (i === word.length - 1) {
+        return currentNode.isEndOfWord;
       }
 
       return false;
     }
 
-    return false;
+
   }
 }
+
+
+const trie = new Trie();
+console.log(trie.insert("apple"));
+console.log(trie.search("apple"));
+console.log(trie.search("app"));
+console.log(trie.insert("app"));

@@ -11,13 +11,17 @@ const isValidParentheses = (s) => {
 
     if (parenthesesMap.has(char)) {
       // Ini adalah karakter kurung tutup
+
+
       const topElement = stack.length === 0 ? "#" : stack.pop();
+
+      console.log(topElement, parenthesesMap.get(char));
 
       if (topElement !== parenthesesMap.get(char)) {
         return false;
       }
     } else {
-      // Ini adalah karakter kurung buka, tambahkan ke tumpukan
+      // Ini adalah karakter kurung buka, tambahkan ke stack
       stack.push(char);
     }
   }
@@ -27,4 +31,4 @@ const isValidParentheses = (s) => {
 
 console.log(isValidParentheses("{}")); // true
 // console.log(isValidParentheses("{]")); // false
-// console.log(isValidParentheses("()[]{}")); // true
+console.log(isValidParentheses("()[]{}")); // true
