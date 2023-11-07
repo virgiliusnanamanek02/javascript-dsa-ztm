@@ -32,6 +32,7 @@ class LinkedList {
     let currentNode = this.head;
 
     while (position < index) {
+
       currentNode = currentNode.next;
       position++;
     }
@@ -39,7 +40,22 @@ class LinkedList {
     return currentNode;
   }
 
+  getLength() {
+    return this.size;
+  }
 
+  search(value) {
+    let currentNode = this.head;
+
+    while (currentNode) {
+
+      if (currentNode.value === value) {
+        return currentNode;
+      }
+      currentNode = currentNode.next;
+    }
+    return null;
+  }
 }
 
 const linkedList = new LinkedList();
@@ -47,4 +63,6 @@ const linkedList = new LinkedList();
 linkedList.add(1);
 linkedList.add(2);
 console.log(linkedList);
-console.log(linkedList.getByIndex(0))
+console.log(linkedList.getByIndex(0));
+console.log(linkedList.getLength());
+console.log(linkedList.search(2));
