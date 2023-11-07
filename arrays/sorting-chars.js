@@ -20,7 +20,7 @@ function shortingCharsOpt(chars) {
     return chars;
   }
 
-  let pivot = chars[0];
+  let pivot = chars[0]; // pivot is first element 
   let left = [];
   let right = [];
 
